@@ -17,155 +17,408 @@
             padding: 0;
             width: 384px;
         }
+
+        ::-webkit-scrollbar {
+            width: 0px;
+            /* remove scrollbar visibility */
+        }
+
+        .height-100-vh {
+            min-height: 100vh;
+        }
+
+        .z-index-1000 {
+            z-index: 1000 !important;
+        }
+
+        .w-384 {
+            width: 384px;
+        }
+
+        .swap {
+            transition: all .3s;
+        }
+
+        .left-0 {
+            left: 0 !important;
+        }
+
+        .cursor-pointer {
+            cursor: pointer
+        }
+
+        .stuck {
+            position: fixed;
+            top: 69px;
+            left: 0;
+            bottom: 0;
+            width: 384px;
+            overflow-y: scroll;
+        }
     </style>
 </head>
 
 <body>
-    <div class="modal fade" id="newAttendance" tabindex="-1" aria-labelledby="newAttendanceLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="newAttendanceLabel">Create New Attendance</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="container-fluid p-0">
+        <header class="sticky-top">
+            <nav>
+                <div class="p-4 bg-primary rounded-bottom">
+                    <h1 class="text-white text-center">Attendance</h1>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div id="swapParent" class="stuck position-fixed w-384 z-index-1000 invisible">
+                <div id="swap1" class="swap stuck position-fixed w-384 z-index-1000 bg-white" style="left: 384px;">
+                    <div class="p-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" id="swapBack1" width="25" height="25"
+                            fill="currentColor" class="cursor-pointer bi bi-arrow-left-short" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z" />
+                        </svg>
+                    </div>
+                    <h2 class="px-3 pt-3">Cloud Computing</h2>
+                    <p class="paragraph p-3 fs-5 fw-lighter">8:30AM - 9:30AM</p>
+                    <div class="px-3">
+                        <div class="progress mb-3">
+                            <div class="progress-bar" role="progressbar" style="width: 13.3%" aria-valuenow="75"
+                                aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <p class="paragraph">4 Students absent</p>
+                    </div>
+                    <ul class="list-group px-3 mb-3">
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col d-flex align-items-center">
+                                    <img width="40" height="40" class="rounded-circle me-3"
+                                        src="https://lh3.googleusercontent.com/ogw/ADGmqu8Jqi2kQUDmiMVi78v_6P1RwWNtJHVQ3RTPLzKK=s83-c-mo">
+                                    <p class="paragraph mb-0">
+                                        <span class="d-block fs-5">Ing Vankhinh</span>
+                                        <span class="d-block fw-lighter">ingvankhinh18@kit.edu.kh</span>
+                                    </p>
+                                </div>
+                                <div class="col d-flex justify-content-end align-items-center">
+                                    <a class="btn">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19"
+                                            fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                            <path
+                                                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col d-flex align-items-center">
+                                    <img width="40" height="40" class="rounded-circle me-3"
+                                        src="https://lh3.googleusercontent.com/ogw/ADGmqu8Jqi2kQUDmiMVi78v_6P1RwWNtJHVQ3RTPLzKK=s83-c-mo">
+                                    <p class="paragraph mb-0">
+                                        <span class="d-block fs-5">Ing Vankhinh</span>
+                                        <span class="d-block fw-lighter">ingvankhinh18@kit.edu.kh</span>
+                                    </p>
+                                </div>
+                                <div class="col d-flex justify-content-end align-items-center">
+                                    <a class="btn">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19"
+                                            fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                            <path
+                                                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col d-flex align-items-center">
+                                    <img width="40" height="40" class="rounded-circle me-3"
+                                        src="https://lh3.googleusercontent.com/ogw/ADGmqu8Jqi2kQUDmiMVi78v_6P1RwWNtJHVQ3RTPLzKK=s83-c-mo">
+                                    <p class="paragraph mb-0">
+                                        <span class="d-block fs-5">Ing Vankhinh</span>
+                                        <span class="d-block fw-lighter">ingvankhinh18@kit.edu.kh</span>
+                                    </p>
+                                </div>
+                                <div class="col d-flex justify-content-end align-items-center">
+                                    <a class="btn">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19"
+                                            fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                            <path
+                                                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col d-flex align-items-center">
+                                    <img width="40" height="40" class="rounded-circle me-3"
+                                        src="https://lh3.googleusercontent.com/ogw/ADGmqu8Jqi2kQUDmiMVi78v_6P1RwWNtJHVQ3RTPLzKK=s83-c-mo">
+                                    <p class="paragraph mb-0">
+                                        <span class="d-block fs-5">Ing Vankhinh</span>
+                                        <span class="d-block fw-lighter">ingvankhinh18@kit.edu.kh</span>
+                                    </p>
+                                </div>
+                                <div class="col d-flex justify-content-end align-items-center">
+                                    <a class="btn">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19"
+                                            fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                            <path
+                                                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col d-flex align-items-center">
+                                    <img width="40" height="40" class="rounded-circle me-3"
+                                        src="https://lh3.googleusercontent.com/ogw/ADGmqu8Jqi2kQUDmiMVi78v_6P1RwWNtJHVQ3RTPLzKK=s83-c-mo">
+                                    <p class="paragraph mb-0">
+                                        <span class="d-block fs-5">Ing Vankhinh</span>
+                                        <span class="d-block fw-lighter">ingvankhinh18@kit.edu.kh</span>
+                                    </p>
+                                </div>
+                                <div class="col d-flex justify-content-end align-items-center">
+                                    <a class="btn">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19"
+                                            fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                            <path
+                                                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col d-flex align-items-center">
+                                    <img width="40" height="40" class="rounded-circle me-3"
+                                        src="https://lh3.googleusercontent.com/ogw/ADGmqu8Jqi2kQUDmiMVi78v_6P1RwWNtJHVQ3RTPLzKK=s83-c-mo">
+                                    <p class="paragraph mb-0">
+                                        <span class="d-block fs-5">Ing Vankhinh</span>
+                                        <span class="d-block fw-lighter">ingvankhinh18@kit.edu.kh</span>
+                                    </p>
+                                </div>
+                                <div class="col d-flex justify-content-end align-items-center">
+                                    <a class="btn">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19"
+                                            fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                            <path
+                                                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="px-3">
+                        <button class="btn btn-secondary w-100 mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-vector-pen" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M10.646.646a.5.5 0 0 1 .708 0l4 4a.5.5 0 0 1 0 .708l-1.902 1.902-.829 3.313a1.5 1.5 0 0 1-1.024 1.073L1.254 14.746 4.358 4.4A1.5 1.5 0 0 1 5.43 3.377l3.313-.828L10.646.646zm-1.8 2.908l-3.173.793a.5.5 0 0 0-.358.342l-2.57 8.565 8.567-2.57a.5.5 0 0 0 .34-.357l.794-3.174-3.6-3.6z" />
+                                <path fill-rule="evenodd"
+                                    d="M2.832 13.228L8 9a1 1 0 1 0-1-1l-4.228 5.168-.026.086.086-.026z" />
+                            </svg>&nbsp;Manual Query</button>
+                        <button class="btn btn-dark w-100 mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-discord" viewBox="0 0 16 16">
+                                <path
+                                    d="M6.552 6.712c-.456 0-.816.4-.816.888s.368.888.816.888c.456 0 .816-.4.816-.888.008-.488-.36-.888-.816-.888zm2.92 0c-.456 0-.816.4-.816.888s.368.888.816.888c.456 0 .816-.4.816-.888s-.36-.888-.816-.888z" />
+                                <path
+                                    d="M13.36 0H2.64C1.736 0 1 .736 1 1.648v10.816c0 .912.736 1.648 1.64 1.648h9.072l-.424-1.48 1.024.952.968.896L15 16V1.648C15 .736 14.264 0 13.36 0zm-3.088 10.448s-.288-.344-.528-.648c1.048-.296 1.448-.952 1.448-.952-.328.216-.64.368-.92.472-.4.168-.784.28-1.16.344a5.604 5.604 0 0 1-2.072-.008 6.716 6.716 0 0 1-1.176-.344 4.688 4.688 0 0 1-.584-.272c-.024-.016-.048-.024-.072-.04-.016-.008-.024-.016-.032-.024-.144-.08-.224-.136-.224-.136s.384.64 1.4.944c-.24.304-.536.664-.536.664-1.768-.056-2.44-1.216-2.44-1.216 0-2.576 1.152-4.664 1.152-4.664 1.152-.864 2.248-.84 2.248-.84l.08.096c-1.44.416-2.104 1.048-2.104 1.048s.176-.096.472-.232c.856-.376 1.536-.48 1.816-.504.048-.008.088-.016.136-.016a6.521 6.521 0 0 1 4.024.752s-.632-.6-1.992-1.016l.112-.128s1.096-.024 2.248.84c0 0 1.152 2.088 1.152 4.664 0 0-.68 1.16-2.448 1.216z" />
+                            </svg> Send to Discord</button>
+                        <button class="btn btn-primary w-100 mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-telegram" viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z" />
+                            </svg>&nbsp; Send to telegram</button>
 
-        <div class="position-sticky">
-            <div class="p-3 bg-primary rounded-bottom">
-                <h1 class="text-white text-center">Attendance</h1>
+                    </div>
+                </div>
+                <div id="swap2" class="swap stuck position-fixed w-384 z-index-1000 bg-white" style="left: 384px;">
+                    <div class="p-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" id="swapBack2" width="25" height="25"
+                            fill="currentColor" class="bi bi-arrow-left-short cursor-pointer" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z" />
+                        </svg>
+                    </div>
+                    <form class="p-3">
+                        <div class="mb-3">
+                            <label for="sessionName" class="form-label">Session Name:</label>
+                            <select id="sessionName" class="form-control">
+                                <option value="1">Cloud Computing</option>
+                                <option value="2">Accounting</option>
+                                <option value="3">Ielt</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="formDate" class="form-label">Date:</label>
+                            <input class="form-control" type="date" id="formDate">
+                        </div>
+                        <div class="mb-3">
+                            <label for="formStartTime" class="form-label">Start Time:</label>
+                            <input class="form-control" type="time" id="formStartTime">
+                        </div>
+                        <div class="mb-3">
+                            <label for="formEndTime" class="form-label">End Time:</label>
+                            <input class="form-control" type="time" id="formEndTime">
+                        </div>
+                    </form>
+                    <div class="px-3">
+                        <button class="btn btn-secondary w-100 mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-vector-pen" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M10.646.646a.5.5 0 0 1 .708 0l4 4a.5.5 0 0 1 0 .708l-1.902 1.902-.829 3.313a1.5 1.5 0 0 1-1.024 1.073L1.254 14.746 4.358 4.4A1.5 1.5 0 0 1 5.43 3.377l3.313-.828L10.646.646zm-1.8 2.908l-3.173.793a.5.5 0 0 0-.358.342l-2.57 8.565 8.567-2.57a.5.5 0 0 0 .34-.357l.794-3.174-3.6-3.6z">
+                                </path>
+                                <path fill-rule="evenodd"
+                                    d="M2.832 13.228L8 9a1 1 0 1 0-1-1l-4.228 5.168-.026.086.086-.026z"></path>
+                            </svg>&nbsp;Start Taking Attendance</button>
+                    </div>
+                </div>
             </div>
             <div class="text-end p-3">
-                <a class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#newAttendance">Create New</a>
+                <a class="btn btn-outline-primary" id="createNewBtn">Create New</a>
             </div>
-        </div>
-        <div class="p-3">
-            <div class="date-and-attendance mb-4">
-                <h3 class="mb-3">22 Dec, 2020</h3>
-                <ul class="list-group">
-                    <li class="list-group-item p-0">
-                        <a class="btn btn-outline-secondary d-block p-2">
-                            <div class="row">
-                                <div class="col text-start">
-                                    <p class="paragraph fs-5 fw-bold ps-2">Cloud Computing</p>
-                                    <p class="paragraph fs-5 fw-lighter mb-0 ps-2">8:30AM - 9:30AM</p>
+            <div class="p-3">
+                <div class="date-and-attendance mb-4">
+                    <h3 class="mb-3">22 Dec, 2020</h3>
+                    <ul class="list-group">
+                        <li class="list-group-item p-0">
+                            <a class="btn btn-outline-secondary d-block p-2 view-details">
+                                <div class="row">
+                                    <div class="col text-start">
+                                        <p class="paragraph fs-5 fw-bold ps-2">Cloud Computing</p>
+                                        <p class="paragraph fs-5 fw-lighter mb-0 ps-2">8:30AM - 9:30AM</p>
+                                    </div>
+                                    <div class="col d-flex justify-content-end align-items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35"
+                                            fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                                        </svg>
+                                    </div>
                                 </div>
-                                <div class="col d-flex justify-content-end align-items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
-                                        class="bi bi-arrow-right-short" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd"
-                                            d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
-                                    </svg>
+                            </a>
+                        </li>
+                        <li class="list-group-item p-0">
+                            <a class="btn btn-outline-secondary d-block p-2">
+                                <div class="row">
+                                    <div class="col text-start">
+                                        <p class="paragraph fs-5 fw-bold ps-2">Cloud Computing</p>
+                                        <p class="paragraph fs-5 fw-lighter mb-0 ps-2">8:30AM - 9:30AM</p>
+                                    </div>
+                                    <div class="col d-flex justify-content-end align-items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35"
+                                            fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                                        </svg>
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="list-group-item p-0">
-                        <a class="btn btn-outline-secondary d-block p-2">
-                            <div class="row">
-                                <div class="col text-start">
-                                    <p class="paragraph fs-5 fw-bold ps-2">Cloud Computing</p>
-                                    <p class="paragraph fs-5 fw-lighter mb-0 ps-2">8:30AM - 9:30AM</p>
+                            </a>
+                        </li>
+                        <li class="list-group-item p-0">
+                            <a class="btn btn-outline-secondary d-block p-2">
+                                <div class="row">
+                                    <div class="col text-start">
+                                        <p class="paragraph fs-5 fw-bold ps-2">Cloud Computing</p>
+                                        <p class="paragraph fs-5 fw-lighter mb-0 ps-2">8:30AM - 9:30AM</p>
+                                    </div>
+                                    <div class="col d-flex justify-content-end align-items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35"
+                                            fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                                        </svg>
+                                    </div>
                                 </div>
-                                <div class="col d-flex justify-content-end align-items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
-                                        class="bi bi-arrow-right-short" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd"
-                                            d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
-                                    </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="date-and-attendance">
+                    <h3 class="mb-3">22 Dec, 2020</h3>
+                    <ul class="list-group">
+                        <li class="list-group-item p-0">
+                            <a class="btn btn-outline-secondary d-block p-2">
+                                <div class="row">
+                                    <div class="col text-start">
+                                        <p class="paragraph fs-5 fw-bold ps-2">Cloud Computing</p>
+                                        <p class="paragraph fs-5 fw-lighter mb-0 ps-2">8:30AM - 9:30AM</p>
+                                    </div>
+                                    <div class="col d-flex justify-content-end align-items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35"
+                                            fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                                        </svg>
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="list-group-item p-0">
-                        <a class="btn btn-outline-secondary d-block p-2">
-                            <div class="row">
-                                <div class="col text-start">
-                                    <p class="paragraph fs-5 fw-bold ps-2">Cloud Computing</p>
-                                    <p class="paragraph fs-5 fw-lighter mb-0 ps-2">8:30AM - 9:30AM</p>
+                            </a>
+                        </li>
+                        <li class="list-group-item p-0">
+                            <a class="btn btn-outline-secondary d-block p-2">
+                                <div class="row">
+                                    <div class="col text-start">
+                                        <p class="paragraph fs-5 fw-bold ps-2">Cloud Computing</p>
+                                        <p class="paragraph fs-5 fw-lighter mb-0 ps-2">8:30AM - 9:30AM</p>
+                                    </div>
+                                    <div class="col d-flex justify-content-end align-items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35"
+                                            fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                                        </svg>
+                                    </div>
                                 </div>
-                                <div class="col d-flex justify-content-end align-items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
-                                        class="bi bi-arrow-right-short" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd"
-                                            d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
-                                    </svg>
+                            </a>
+                        </li>
+                        <li class="list-group-item p-0">
+                            <a class="btn btn-outline-secondary d-block p-2">
+                                <div class="row">
+                                    <div class="col text-start">
+                                        <p class="paragraph fs-5 fw-bold ps-2">Cloud Computing</p>
+                                        <p class="paragraph fs-5 fw-lighter mb-0 ps-2">8:30AM - 9:30AM</p>
+                                    </div>
+                                    <div class="col d-flex justify-content-end align-items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35"
+                                            fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                                        </svg>
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="text-center p-3">
+                    <a class="btn btn-outline-primary">Load More</a>
+                </div>
             </div>
-            <div class="date-and-attendance">
-                <h3 class="mb-3">22 Dec, 2020</h3>
-                <ul class="list-group">
-                    <li class="list-group-item p-0">
-                        <a class="btn btn-outline-secondary d-block p-2">
-                            <div class="row">
-                                <div class="col text-start">
-                                    <p class="paragraph fs-5 fw-bold ps-2">Cloud Computing</p>
-                                    <p class="paragraph fs-5 fw-lighter mb-0 ps-2">8:30AM - 9:30AM</p>
-                                </div>
-                                <div class="col d-flex justify-content-end align-items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
-                                        class="bi bi-arrow-right-short" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd"
-                                            d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
-                                    </svg>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="list-group-item p-0">
-                        <a class="btn btn-outline-secondary d-block p-2">
-                            <div class="row">
-                                <div class="col text-start">
-                                    <p class="paragraph fs-5 fw-bold ps-2">Cloud Computing</p>
-                                    <p class="paragraph fs-5 fw-lighter mb-0 ps-2">8:30AM - 9:30AM</p>
-                                </div>
-                                <div class="col d-flex justify-content-end align-items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
-                                        class="bi bi-arrow-right-short" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd"
-                                            d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
-                                    </svg>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="list-group-item p-0">
-                        <a class="btn btn-outline-secondary d-block p-2">
-                            <div class="row">
-                                <div class="col text-start">
-                                    <p class="paragraph fs-5 fw-bold ps-2">Cloud Computing</p>
-                                    <p class="paragraph fs-5 fw-lighter mb-0 ps-2">8:30AM - 9:30AM</p>
-                                </div>
-                                <div class="col d-flex justify-content-end align-items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
-                                        class="bi bi-arrow-right-short" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd"
-                                            d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
-                                    </svg>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="text-center p-3">
-                <a class="btn btn-outline-primary">Load More</a>
-            </div>
-        </div>
+        </main>
+
     </div>
+    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
         crossorigin="anonymous"></script>
