@@ -3,10 +3,10 @@
     "name" : "Meet's Attendance",
     "description" : "Super Simple Google Meet's Attendee Query & Attendance Taking",
     "version" : "1.0.0",
-    "icons" : { "128" : "icon_128.png" },
+    "icons" : { "128" : "./images/icon.png" },
     "browser_action": {
 
-        "default_icon" : "icon.png",
+        "default_icon" : "./images/icon.png",
         "default_popup" : "popup.html"
     },
     "content_scripts": [
@@ -16,4 +16,4 @@
         }
     ],
     "permissions" : ["activeTab"]
-}b
+}

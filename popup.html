@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Launcher</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans" type="text/css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <style>
-        html, body{
+        html,
+        body {
             font-family: 'Open Sans', sans-serif;
             font-size: 12px;
             margin: 0;
@@ -20,61 +19,157 @@
         }
     </style>
 </head>
-<body>
-    
-    <div class="container-fluid border border"></div>
-        <div class="position-sticky">
-            <h4 class="ps-2 pt-2">Attendance</h4>
 
-            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                <button class="btn btn-primary me-md-2" type="button">
-                    Create New Session
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-journal-plus" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M8 5.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 .5-.5z"/>
-                        <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z"/>
-                        <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z"/>
-                    </svg>
-                </button>
+<body>
+    <div class="modal fade" id="newAttendance" tabindex="-1" aria-labelledby="newAttendanceLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="newAttendanceLabel">Create New Attendance</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
             </div>
         </div>
+    </div>
+    <div class="container-fluid p-0">
 
-        <div class="container-fluid">            
-
-            <div class="container">
-                <h5>22 - March - 2020</h5>
-
+        <div class="position-sticky">
+            <div class="p-3 bg-primary rounded-bottom">
+                <h1 class="text-white text-center">Attendance</h1>
+            </div>
+            <div class="text-end p-3">
+                <a class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#newAttendance">Create New</a>
+            </div>
+        </div>
+        <div class="p-3">
+            <div class="date-and-attendance mb-4">
+                <h3 class="mb-3">22 Dec, 2020</h3>
                 <ul class="list-group">
-                    <li class="list-group-item">
-                        <div class="row fs-5">
-                            <div class="col-md-10 font-monospace">
-                                Accounting & Finance
+                    <li class="list-group-item p-0">
+                        <a class="btn btn-outline-secondary d-block p-2">
+                            <div class="row">
+                                <div class="col text-start">
+                                    <p class="paragraph fs-5 fw-bold ps-2">Cloud Computing</p>
+                                    <p class="paragraph fs-5 fw-lighter mb-0 ps-2">8:30AM - 9:30AM</p>
+                                </div>
+                                <div class="col d-flex justify-content-end align-items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+                                        class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                                    </svg>
+                                </div>
                             </div>
-                            <div class="col-md-2">
-                                a
-                            </div>
-                        </div>
-                        <div class="row  fs-5">
-                            <div class="col-md-10">
-                                hi
-                            </div>
-                            <div class="col-md-2">
-                                a
-                            </div>
-                        </div>
+                        </a>
                     </li>
-                    <li class="list-group-item">Dapibus ac facilisis in</li>
-                    <li class="list-group-item">Morbi leo risus</li>
+                    <li class="list-group-item p-0">
+                        <a class="btn btn-outline-secondary d-block p-2">
+                            <div class="row">
+                                <div class="col text-start">
+                                    <p class="paragraph fs-5 fw-bold ps-2">Cloud Computing</p>
+                                    <p class="paragraph fs-5 fw-lighter mb-0 ps-2">8:30AM - 9:30AM</p>
+                                </div>
+                                <div class="col d-flex justify-content-end align-items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+                                        class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list-group-item p-0">
+                        <a class="btn btn-outline-secondary d-block p-2">
+                            <div class="row">
+                                <div class="col text-start">
+                                    <p class="paragraph fs-5 fw-bold ps-2">Cloud Computing</p>
+                                    <p class="paragraph fs-5 fw-lighter mb-0 ps-2">8:30AM - 9:30AM</p>
+                                </div>
+                                <div class="col d-flex justify-content-end align-items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+                                        class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
                 </ul>
             </div>
-
+            <div class="date-and-attendance">
+                <h3 class="mb-3">22 Dec, 2020</h3>
+                <ul class="list-group">
+                    <li class="list-group-item p-0">
+                        <a class="btn btn-outline-secondary d-block p-2">
+                            <div class="row">
+                                <div class="col text-start">
+                                    <p class="paragraph fs-5 fw-bold ps-2">Cloud Computing</p>
+                                    <p class="paragraph fs-5 fw-lighter mb-0 ps-2">8:30AM - 9:30AM</p>
+                                </div>
+                                <div class="col d-flex justify-content-end align-items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+                                        class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list-group-item p-0">
+                        <a class="btn btn-outline-secondary d-block p-2">
+                            <div class="row">
+                                <div class="col text-start">
+                                    <p class="paragraph fs-5 fw-bold ps-2">Cloud Computing</p>
+                                    <p class="paragraph fs-5 fw-lighter mb-0 ps-2">8:30AM - 9:30AM</p>
+                                </div>
+                                <div class="col d-flex justify-content-end align-items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+                                        class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list-group-item p-0">
+                        <a class="btn btn-outline-secondary d-block p-2">
+                            <div class="row">
+                                <div class="col text-start">
+                                    <p class="paragraph fs-5 fw-bold ps-2">Cloud Computing</p>
+                                    <p class="paragraph fs-5 fw-lighter mb-0 ps-2">8:30AM - 9:30AM</p>
+                                </div>
+                                <div class="col d-flex justify-content-end align-items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+                                        class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="text-center p-3">
+                <a class="btn btn-outline-primary">Load More</a>
+            </div>
         </div>
-        
-        
     </div>
-    
-    <!-- SCRIPTS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-    <!-- Custom Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
